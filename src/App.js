@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 
+const Hola = (props)=>{
+  return (
+    <div>
+      <h1>HOLA {props.names}</h1>
+    </div>
+  )
+}
+const Chau = (props)=>{
+  return(
+    <div>
+      <h1>CHAU {props.name}</h1>
+    </div>
+  )
+}
+
 function App() {
+  const resu = prompt('text a number',1);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {resu==='1' ? <Hola name = 'Tobias'/> : <Chau name='Mareco'/>}
     </div>
   );
 }
 
 export default App;
+
